@@ -1,5 +1,5 @@
 import initialData, { DataType } from "initialData";
-import { useState } from "react";
+import React, { useState } from "react";
 import Column from "Column";
 import {
   DragDropContext,
@@ -47,14 +47,16 @@ const App = (): JSX.Element => {
 
   return (
     <>
-      <DragDropContext onDragEnd={onDragEnd}>
-        {data.columnOrder.map((columnId) => {
-          const column = data.columns[columnId];
-          const tasks = column.taskIds.map((taskId) => data.tasks[taskId]);
+      <React.StrictMode>
+        <DragDropContext onDragEnd={onDragEnd}>
+          {data.columnOrder.map((columnId) => {
+            const column = data.columns[columnId];
+            const tasks = column.taskIds.map((taskId) => data.tasks[taskId]);
 
-          return <Column key={column.id} column={column} tasks={tasks} />;
-        })}
-      </DragDropContext>
+            return <Column key={column.id} column={column} tasks={tasks} />;
+          })}
+        </DragDropContext>
+      </React.StrictMode>
     </>
   );
 };
