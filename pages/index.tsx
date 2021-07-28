@@ -7,6 +7,7 @@ import {
   resetServerContext,
 } from 'react-beautiful-dnd';
 import { GetServerSideProps } from 'next';
+
 const App = (): JSX.Element => {
   const [data, setData] = useState<DataType>(initialData);
 
@@ -60,6 +61,7 @@ const App = (): JSX.Element => {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   resetServerContext();
+
   return { props: {} };
 };
 export default App;
