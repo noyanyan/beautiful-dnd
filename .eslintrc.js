@@ -4,7 +4,8 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'plugin:react/recommended',
+    'next',
+    'next/core-web-vitals',
     'airbnb',
     'airbnb/hooks',
     'plugin:import/errors',
