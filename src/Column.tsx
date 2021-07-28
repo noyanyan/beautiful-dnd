@@ -1,5 +1,5 @@
-import Task from 'Task';
-import { Droppable } from 'react-beautiful-dnd';
+import Task from "Task";
+import { Droppable } from "react-beautiful-dnd";
 
 type Props = {
   column: {
@@ -34,9 +34,7 @@ const Column = ({ column, tasks }: Props): JSX.Element => {
         {(provided) => (
           <div
             className="p-2"
-            // eslint-disable-next-line @typescript-eslint/unbound-method
             ref={provided.innerRef}
-            // eslint-disable-next-line react/jsx-props-no-spreading
             {...provided.droppableProps}
           >
             {tasks.map((task, index) => (

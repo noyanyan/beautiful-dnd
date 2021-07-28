@@ -1,4 +1,4 @@
-import { Draggable } from 'react-beautiful-dnd';
+import { Draggable } from "react-beautiful-dnd";
 
 type Props = {
   task: {
@@ -12,11 +12,8 @@ const Task = ({ task, index }: Props): JSX.Element => (
     {(provided) => (
       <div
         className="mb-2 p-2 border border-solid hover:border-gray-500 rounded transition duration-150 ease-in-out"
-        // eslint-disable-next-line @typescript-eslint/unbound-method
         ref={provided.innerRef}
-        // eslint-disable-next-line react/jsx-props-no-spreading
         {...provided.draggableProps}
-        // eslint-disable-next-line react/jsx-props-no-spreading
         {...provided.dragHandleProps}
       >
         {task.content}

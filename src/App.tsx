@@ -1,12 +1,12 @@
-import initialData, { DataType } from 'initialData';
-import { useState } from 'react';
-import Column from 'Column';
+import initialData, { DataType } from "initialData";
+import { useState } from "react";
+import Column from "Column";
 import {
   DragDropContext,
   OnDragEndResponder,
   resetServerContext,
-} from 'react-beautiful-dnd';
-import { GetServerSideProps } from 'next';
+} from "react-beautiful-dnd";
+import { GetServerSideProps } from "next";
 
 const App = (): JSX.Element => {
   const [data, setData] = useState<DataType>(initialData);
@@ -59,9 +59,4 @@ const App = (): JSX.Element => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  resetServerContext();
-
-  return { props: {} };
-};
 export default App;
