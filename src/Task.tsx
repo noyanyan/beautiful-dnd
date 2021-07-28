@@ -11,7 +11,7 @@ const Task = ({ task, index }: Props): JSX.Element => (
   <Draggable draggableId={task.id} index={index}>
     {(provided) => (
       <div
-        className="border border-solid p-2 mb-2 transition rounded ease-in-out duration-150 hover:border-gray-500"
+        className="mb-2 p-2 border border-solid hover:border-gray-500 rounded transition duration-150 ease-in-out"
         // eslint-disable-next-line @typescript-eslint/unbound-method
         ref={provided.innerRef}
         // eslint-disable-next-line react/jsx-props-no-spreading
