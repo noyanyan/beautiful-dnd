@@ -4,8 +4,9 @@ type Props = {
   Component: React.FC<any>;
   pageProps: unknown;
 };
-function MyApp({ Component, pageProps }: Props) {
-  return <Component {...pageProps} />;
-}
+
+const MyApp = ({ Component, pageProps }: Props): JSX.Element => (
+  <Component {...pageProps} />
+);
 
 export default MyApp;
